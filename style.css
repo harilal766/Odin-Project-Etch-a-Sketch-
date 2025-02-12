@@ -1,17 +1,16 @@
 
-.board{
+#drawingBoard{
     border: 1px solid black;
     height: 80vh; width: 100vh;
-
-    display: flex;
 }
 
 #row {
-    height: 60px; width: 60px;
-    display: flex;
+    height: 1vh; width: 100vh;
+    background-color: aqua;
+    border: 1px solid red;
 }
 
-.pixel {
+#pixel {
     border: 1px solid black;
     background-color: aqua;
     height: 30px; width: 30px;
