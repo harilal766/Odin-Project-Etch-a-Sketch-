@@ -6,8 +6,7 @@
 
 #row {
     height: 1vh; width: 100vh;
-    background-color: aqua;
-    border: 1px solid red;
+    display: flex;
 }
 
 #pixel {
@@ -16,6 +15,6 @@
     height: 30px; width: 30px;
 }
 
-.pixel:hover{
+#pixel:hover{
     background-color: green;
 }
