@@ -1,17 +1,18 @@
 
 .drawingBoard{
     border: 1px solid black;
-    height: 80vh; width: 100vh;
+    height: 100vh; width: 100vh;
 }
 
 .row {
     display: flex;
 }
 
-.pixel {
+#pixel {
+    flex:1; aspect-ratio: 1;
     border: 1px solid black;
     background-color: aqua;
-    height: 30px; width: 30px;
+
 }
 
 .pixel:hover{
