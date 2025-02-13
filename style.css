@@ -1,19 +1,19 @@
 
-#drawingBoard{
+.drawingBoard{
     border: 1px solid black;
     height: 80vh; width: 100vh;
 }
 
-#row {
+.row {
     display: flex;
 }
 
-#pixel {
+.pixel {
     border: 1px solid black;
     background-color: aqua;
     height: 30px; width: 30px;
 }
 
-#pixel:hover{
+.pixel:hover{
     background-color: green;
 }
