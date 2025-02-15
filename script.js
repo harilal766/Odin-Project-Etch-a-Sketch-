@@ -2,9 +2,8 @@
 let drawingBoard = document.getElementById("drawingBoard");
 
 
-function board(){
+function board(limit){
     let pixelCount = 0;
-    let limit = 16;
     // column
 
     for (let row=1; row <= limit; row++){
@@ -18,5 +17,14 @@ function board(){
     }
 }
 
-board();
 
+
+board(33);
+
+let pixels = drawingBoard.querySelectorAll(".pixel");
+
+pixels.forEach((pixel) => {
+    pixel.addEventListener("mouseover",function(event){
+        event.target.style.backgroundColor= "red";
+    });    
+});
