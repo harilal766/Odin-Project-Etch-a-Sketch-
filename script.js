@@ -17,14 +17,28 @@ function board(limit){
     }
 }
 
-
-
 board(33);
 
 let pixels = drawingBoard.querySelectorAll(".pixel");
+const resetButton = document.getElementById("resetButton");
 
+
+
+
+// coloring and resetting
 pixels.forEach((pixel) => {
     pixel.addEventListener("mouseover",function(event){
+        if (event.button === 1){
+            console.log("middle");
+        } 
         event.target.style.backgroundColor= "red";
     });    
+
+    resetButton.addEventListener("click",function(){
+        pixel.style.backgroundColor = "";
+    });
 });
+
+
+
+
