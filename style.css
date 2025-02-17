@@ -1,5 +1,10 @@
+.title ,#colorTitle{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
 body {
-    background-color: grey;
+    background-color: lightgrey;
     display: flex; gap: 20px;
 }
 
@@ -8,7 +13,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-items: center; align-items: center;
-    gap: 20px;
+    gap: 5px;
 }
 
 
@@ -22,13 +27,13 @@ button{
     font-weight: bold;
 }
 
-.title {
-    font-family: Arial, Helvetica, sans-serif;
-}
+
 
 #drawingBoard{
     border: 1px solid black;
     width: 700px; height: 700px;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 .row {
@@ -38,4 +43,17 @@ button{
 .pixel {
     flex:1; aspect-ratio: 1;
     background-color: white;
+}
+
+
+#colorPalette {
+    background-color: aqua;
+    height: 40px; width: 700px;
+    border-radius: 5px;
+    display: flex;
+}
+
+
+.single-color {
+    height: auto; width: 100%;
 }

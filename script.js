@@ -32,14 +32,43 @@ pixels.forEach((pixel) => {
         } 
         event.target.style.backgroundColor = selectedColor;
     });    
-    
+
     resetButton.addEventListener("click",function(){
         pixel.style.backgroundColor = "";
     });
 });
 }
 
-colorAndReset("blue")
 
 
 
+// color palette creation
+const colorPaletteDiv = document.getElementById("colorPalette");
+colorPaletteDiv.id = "colorPalette";
+const colorPalette = [
+    "#B2F7E3","#D0E7FF","#FFD6E0","#E6E6FA",
+    "#FFF5E1","#FFE5B4","#C1E1FF","#F0F0F0"
+];
+colorPalette.forEach( color =>{
+    const singleColor = color;
+    color = document.createElement("div"); color.classList.add("single-color");
+    color.style.backgroundColor = singleColor;
+    colorPaletteDiv.appendChild(color);
+});
+
+
+// color selection
+const colors = colorPaletteDiv.querySelectorAll(".single-color");
+
+
+
+
+colors.forEach(color =>{
+    color.addEventListener("click",function(event){
+        // remove highlight from previously selected color
+        colors.forEach( c => {c.style.border = "";});
+        // highlight selected color
+        event.target.style.border = "2px solid white";
+        colorAndReset(event.target.style.backgroundColor);
+    });
+});
