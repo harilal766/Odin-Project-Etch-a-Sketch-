@@ -25,18 +25,18 @@ const resetButton = document.getElementById("resetButton");
 
 function colorAndReset(selectedColor){
     // coloring and resetting
-pixels.forEach((pixel) => {
-    pixel.addEventListener("mouseover",function(event){
-        if (event.button === 1){
-            console.log("middle");
-        } 
-        event.target.style.backgroundColor = selectedColor;
-    });    
+    pixels.forEach((pixel) => {
+        pixel.addEventListener("mouseover",function(event){
+            if (event.button === 1){
+                console.log("middle");
+            } 
+            event.target.style.backgroundColor = selectedColor;
+        });    
 
-    resetButton.addEventListener("click",function(){
-        pixel.style.backgroundColor = "";
+        resetButton.addEventListener("click",function(){
+            pixel.style.backgroundColor = "";
+        });
     });
-});
 }
 
 
@@ -66,9 +66,10 @@ const colors = colorPaletteDiv.querySelectorAll(".single-color");
 colors.forEach(color =>{
     color.addEventListener("click",function(event){
         // remove highlight from previously selected color
+        const targetColor = event.target.style.backgroundColor;
         colors.forEach( c => {c.style.border = "";});
         // highlight selected color
         event.target.style.border = "2px solid white";
-        colorAndReset(event.target.style.backgroundColor);
+        colorAndReset(targetColor);
     });
 });
