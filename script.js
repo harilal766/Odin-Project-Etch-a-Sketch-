@@ -23,22 +23,23 @@ let pixels = drawingBoard.querySelectorAll(".pixel");
 const resetButton = document.getElementById("resetButton");
 
 
-
-
-// coloring and resetting
+function colorAndReset(selectedColor){
+    // coloring and resetting
 pixels.forEach((pixel) => {
     pixel.addEventListener("mouseover",function(event){
         if (event.button === 1){
             console.log("middle");
         } 
-        event.target.style.backgroundColor= "red";
+        event.target.style.backgroundColor = selectedColor;
     });    
-
+    
     resetButton.addEventListener("click",function(){
         pixel.style.backgroundColor = "";
     });
 });
+}
 
+colorAndReset("blue")
 
 
 

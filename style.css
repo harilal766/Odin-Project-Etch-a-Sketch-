@@ -39,7 +39,3 @@ button{
     flex:1; aspect-ratio: 1;
     background-color: white;
 }
-
-.pixel:hover{
-    background-color: green;
-}
